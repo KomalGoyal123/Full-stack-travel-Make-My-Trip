@@ -1,0 +1,48 @@
+# ============================================
+# IDE FILES
+# ============================================
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+
+# ============================================
+# BACKEND (Spring Boot)
+# ============================================
+backend/target/
+backend/uploads/
+backend/HELP.md
+backend/.mvn/wrapper/maven-wrapper.jar
+
+# ============================================
+# FRONTEND (Next.js)
+# ============================================
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/build/
+frontend/.env.local
+frontend/.env.*.local
+
+# ============================================
+# OS FILES
+# ============================================
+.DS_Store
+Thumbs.db
+
+# ============================================
+# LOGS
+# ============================================
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ============================================
+# ENVIRONMENT
+# ============================================
+.env
+.env.local
+.env.*.local
