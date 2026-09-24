@@ -11,7 +11,7 @@ import java.util.List;
 @RequestMapping("/api/preferences")
 @CrossOrigin(origins = {
         "http://localhost:3000",
-        "https://your-app.netlify.app",
+        "https://make-my-trip-full-stake.netlify.app",
         "https://your-app.vercel.app"
 })
 public class UserPreferencesController {

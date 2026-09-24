@@ -15,7 +15,7 @@ public class CorsConfig {
             public void addCorsMappings(CorsRegistry registry) {
 
                 registry.addMapping("/**")
-                        .allowedOrigins("http://localhost:3000" ,"https://your-app.netlify.app",
+                        .allowedOrigins("http://localhost:3000" ,"https://make-my-trip-full-stake.netlify.app",
                                 "https://your-app.vercel.app") // ✅ FIXED
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*")

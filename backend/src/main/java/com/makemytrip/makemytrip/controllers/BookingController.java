@@ -50,7 +50,7 @@ class CancelRequest {
 @RequestMapping("/booking")
 @CrossOrigin(origins = {
         "http://localhost:3000",
-        "https://your-app.netlify.app",
+        "https://make-my-trip-full-stake.netlify.app",
         "https://your-app.vercel.app"
 })
 public class BookingController {
