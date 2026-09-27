@@ -40,10 +40,11 @@ const FlightList = ({ onSelect }: any) => {
   return (
     <div>
       <h3 className="text-lg font-semibold mb-2">Flight List</h3>
-      <Table>
+      <div className="w-full overflow-x-auto">
+      <Table className="min-w-[500px]">
         <TableHeader>
           <TableRow>
-            <TableHead>Flight Name</TableHead>
+            <TableHead >Flight Name</TableHead>
             <TableHead>From</TableHead>
            
             <TableHead>To</TableHead>
@@ -92,6 +93,7 @@ const FlightList = ({ onSelect }: any) => {
           )}
         </TableBody>
       </Table>
+      </div>
     </div>
   );
 };

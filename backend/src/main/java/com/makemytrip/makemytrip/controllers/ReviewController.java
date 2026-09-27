@@ -100,7 +100,7 @@ public class ReviewController {
     }
 
 
-    // ✅ UPDATED: Cloudinary upload (permanent storage)
+    // UPDATED: Cloudinary upload (permanent storage)
     @PostMapping("/uploadPhoto/{reviewId}")
     public ResponseEntity<?> uploadPhoto(
             @PathVariable String reviewId,

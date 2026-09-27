@@ -113,7 +113,7 @@ function UserSearch() {
 
   return (
     <div className="space-y-4">
-      <form onSubmit={handleSearch} className="flex gap-2">
+      <form onSubmit={handleSearch} className="flex flex-col sm:flex-row gap-2">
         <div className="flex-1">
           <Label htmlFor="email" className="sr-only">
             Email
@@ -127,7 +127,7 @@ function UserSearch() {
             required
           />
         </div>
-        <Button type="submit">Search</Button>
+        <Button type="submit" className="w-full sm:w-auto">Search</Button>
       </form>
       {user && (
         <div className="border p-4 rounded-md">
@@ -277,7 +277,7 @@ function AddEditHotel({ hotel }: { hotel: Hotel | null }) {
           required
         />
       </div>
-      <Button type="submit">{hotel ? "Update Hotel" : "Add Hotel"}</Button>
+      <Button type="submit" className="w-full sm:w-auto">{hotel ? "Update Hotel" : "Add Hotel"}</Button>
     </form>
   );
 }
@@ -443,7 +443,7 @@ function AddEditFlight({ flight }: { flight: Flight | null }) {
           required
         />
       </div>
-      <Button type="submit">{flight ? "Update Flight" : "Add Flight"}</Button>
+      <Button type="submit" className="w-full sm:w-auto">{flight ? "Update Flight" : "Add Flight"}</Button>
     </form>
   );
 }
@@ -455,9 +455,9 @@ export default function AdminDashboard() {
 
   return (
     <div className="container mx-auto p-4 bg-white max-w-full">
-      <h1 className="text-3xl font-bold mb-6 ">Admin Dashboard</h1>
+      <h1 className="text-2xl sm:text-3xl font-bold mb-6">Admin Dashboard</h1>
       <Tabs value={activeTab} onValueChange={setActiveTab}>
-        <TabsList className="grid w-full grid-cols-4  text-black">
+        <TabsList className="grid w-full grid-cols-2 sm:grid-cols-4 text-black !h-auto min-h-fit  gap-1 p-1">
           <TabsTrigger value="flights">Flights</TabsTrigger>
           <TabsTrigger value="hotels">Hotels</TabsTrigger>
           <TabsTrigger value="users">Users</TabsTrigger>
@@ -473,7 +473,7 @@ export default function AdminDashboard() {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                 <FlightList onSelect={setSelectedFlight} />
                 <AddEditFlight flight={selectedFlight} />
               </div>
@@ -490,7 +490,7 @@ export default function AdminDashboard() {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                 <HotelList onSelect={setSelectedHotel} />
                 <AddEditHotel hotel={selectedHotel} />
               </div>
